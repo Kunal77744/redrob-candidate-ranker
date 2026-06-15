@@ -20,7 +20,7 @@ team_members:
 # Code and reproducibility
 # ============================================================================
 github_repo: "https://github.com/Kunal77744/redrob-candidate-ranker"
-sandbox_link: "https://redrob-ai-recruiter-brain.streamlit.app"            # Replace with actual final URL if needed
+sandbox_link: "https://redrob-candidate-ranker-5pyzjxq5s6qisxfmjzuwkd.streamlit.app/"
 
 reproduce_command: "python rank.py --candidates ./[PUB] India_runs_data_and_ai_challenge/India_runs_data_and_ai_challenge/candidates.jsonl --out ./KD_ByteBusters.csv"
 
