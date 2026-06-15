@@ -62,7 +62,7 @@ graph TD
 ├── app.py                                    # Streamlit recruiter dashboard
 ├── rank.py                                   # Main CLI ranking runner script
 ├── candidates_subset.jsonl                   # 5,000 candidate subset for UI testing (~24MB)
-├── submission.csv                            # Validated output CSV containing Top 100
+├── KD_ByteBusters.csv                        # Validated output CSV containing Top 100
 ├── requirements.txt                          # Python dependencies
 └── README.md                                 # Project documentation
 ```
@@ -78,15 +78,15 @@ pip install streamlit pandas
 ```
 
 ### 2. Run the Main Ranker (Full 100k Pool)
-To generate the final `submission.csv` on the full candidate pool:
+To generate the final `KD_ByteBusters.csv` on the full candidate pool:
 ```bash
-python rank.py --candidates "[PUB] India_runs_data_and_ai_challenge/India_runs_data_and_ai_challenge/candidates.jsonl" --out submission.csv
+python rank.py --candidates "[PUB] India_runs_data_and_ai_challenge/India_runs_data_and_ai_challenge/candidates.jsonl" --out KD_ByteBusters.csv
 ```
 
 ### 3. Run the Format Validator
 Verify that the output format complies with the hackathon validation rules:
 ```bash
-python "[PUB] India_runs_data_and_ai_challenge/India_runs_data_and_ai_challenge/validate_submission.py" submission.csv
+python "[PUB] India_runs_data_and_ai_challenge/India_runs_data_and_ai_challenge/validate_submission.py" KD_ByteBusters.csv
 ```
 
 ### 4. Run the Automated Unit Tests
