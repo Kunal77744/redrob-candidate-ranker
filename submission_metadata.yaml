@@ -1,0 +1,66 @@
+# Redrob Hackathon — Submission Metadata
+# Matches registration information on the Hack2skill portal.
+
+# ============================================================================
+# Team identity
+# ============================================================================
+team_name: "Kunal Deshmukh"  # Used in leaderboard and announcements
+
+primary_contact:
+  name: "Kunal Deshmukh"
+  email: "deshmukhkunal813@gmail.com"   # Used for all organizer communication
+  phone: "+91-XXXXXXXXXX"              # Used for top-50 / top-10 outreach
+
+team_members:
+  - name: "Kunal Deshmukh"
+    email: "deshmukhkunal813@gmail.com"
+    role: "AI & ML Engineer"
+
+# ============================================================================
+# Code and reproducibility
+# ============================================================================
+github_repo: "https://github.com/deshmukhkunal813/redrob-candidate-ranker"  # Replace with actual final URL if needed
+sandbox_link: "https://redrob-ai-recruiter-brain.streamlit.app"            # Replace with actual final URL if needed
+
+reproduce_command: "python rank.py --candidates ./[PUB] India_runs_data_and_ai_challenge/India_runs_data_and_ai_challenge/candidates.jsonl --out ./submission.csv"
+
+# ============================================================================
+# Compute environment
+# ============================================================================
+compute:
+  platform: "Local Intel Core i7 PC"
+  cpu_cores: 8
+  ram_gb: 16
+  python_version: "3.10.11"
+  os: "Windows 11"
+  uses_gpu_for_inference: false                 # Must be false
+  has_network_during_ranking: false             # Must be false
+  pre_computation_required: false               # false since scoring is lightweight heuristic
+  pre_computation_time_minutes: 0
+
+# ============================================================================
+# AI tools declaration
+# ============================================================================
+ai_tools_used:
+  - "Claude"
+  - "Gemini"
+  - "Other"
+
+ai_usage_summary: |
+  Used Claude (via pair-programming agent) for code optimization, debugging logical edge cases in candidate availability scores, and structural code refactoring. Used Gemini for brainstorming the dynamic reasoning structures and UI wireframing. All candidate profile scoring is computed entirely offline locally without external APIs.
+
+# ============================================================================
+# Approach summary
+# ============================================================================
+methodology_summary: |
+  Rule-based candidate discoverer with a Two-Stage Hybrid Scoring Model. Sanitizes inputs first, blocking 100% of synthetic honeypot candidates based on impossible skill durations and career overlaps. Computes candidate profile alignment (experience Sweet-spot: 5-9 years, current title fit, and skill-level weights with endorsement trust factors) and scales it using a multiplicative behavioral Availability Modifier. Tie-breaks are handled alphabetically by candidate ID. CPU execution completes in ~8 seconds on 100,000 profiles.
+
+# ============================================================================
+# Declarations
+# ============================================================================
+declarations:
+  read_submission_spec: true        # I have read submission_spec.md in full
+  code_is_original_work: true       # My code is my team's original work
+  no_collusion: true                # I have not coordinated my submission with other teams
+  honeypot_check_done: true         # Checked for honeypots in my ranking
+  reproduction_tested: true         # Tested reproduction command successfully

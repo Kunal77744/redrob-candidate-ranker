@@ -1,0 +1,15 @@
+# Python cache files
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Original large dataset and documentation folder (contains the 487MB candidates.jsonl)
+*India_runs_data_and_ai_challenge/
+
+# Presentation templates
+template.pptx
+*.pptx
+
+# Local/system files
+.DS_Store
+Thumbs.db
